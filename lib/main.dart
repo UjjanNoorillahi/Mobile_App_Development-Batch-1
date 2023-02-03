@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'button.dart';
+
 void main() {
   runApp(const OurFlutterApp());
-  print("Build from Main Function");
 }
 
 class OurFlutterApp extends StatelessWidget {
@@ -11,24 +12,27 @@ class OurFlutterApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     print('Build from internal Widget');
+    // ignore: prefer_const_constructors
     return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.blue,
-        appBar: AppBar(
-          title: const Text('Our Flutter App'),
-          backgroundColor: Colors.teal,
-        ),
-        body: Center(
-          child: Container(
-            height: 200,
-            width: 200,
-            color: Colors.lightGreen,
-            child: const Center(
-              child: Text('Sukkur IBA'),
-            ),
-          ),
-        ),
-      ),
+      home: const Button(),
+
+      // home: Scaffold(
+      //   backgroundColor: Colors.blue,
+      //   appBar: AppBar(
+      //     title: const Text('Stateless Widget Screen'),
+      //     backgroundColor: Colors.teal,
+      //   ),
+      //   body: Center(
+      //     child: Container(
+      //       height: 200,
+      //       width: 200,
+      //       color: Colors.lightGreen,
+      //       child: const Center(
+      //         child: Text('Sukkur IBA'),
+      //       ),
+      //     ),
+      //   ),
+      // ),
     );
   }
 }
